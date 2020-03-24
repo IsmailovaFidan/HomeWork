@@ -1,4 +1,4 @@
-package Homeworks.hw5;
+package hw5;
 
 import java.util.Arrays;
 

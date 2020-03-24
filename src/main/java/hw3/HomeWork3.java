@@ -1,4 +1,4 @@
-package Homeworks.hw3;
+package hw3;
 
 import java.util.*;
 

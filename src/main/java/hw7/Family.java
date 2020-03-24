@@ -1,51 +1,12 @@
-package hw5;
+package hw7;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class Family {
 
-    private final Human mother;
-
-    private final Human father;
-
+    Woman mother;
+    Man father;
     private Human[] children = new Human[5];
-
-    private Pet pet;
-
-    private int count = 0;
-
-     static int temp = 0;
-
-    public Family(Human mother, Human father) {
-        count = 2;
-        this.mother = mother;
-        this.father = father;
-    }
-
-    public Family(Human mother, Human father, Human[] children, Pet pet) {
-        this.mother = mother;
-        this.father = father;
-        this.children = children;
-        this.pet = pet;
-    }
-
-    public Human getMother() {
-        return mother;
-    }
-
-    public Human getFather() {
-        return father;
-    }
-
-
-    public Human[] getChildren() {
-        return children;
-    }
-
-    public void setChildren(Human[] children) {
-        this.children = children;
-    }
 
     public Pet getPet() {
         return pet;
@@ -55,12 +16,27 @@ public class Family {
         this.pet = pet;
     }
 
-    public void addChild(Human child) {
+    private Pet pet;
+    private int count = 0;
+    static int temp = 0;
 
+    public Family(Woman mother, Man father) {
+        count = 2;
+        this.mother = mother;
+        this.father = father;
+    }
+
+    public Family(Woman mother, Man father, Human[] children, Pet pet) {
+        this.mother = mother;
+        this.father = father;
+        this.children = children;
+        this.pet = pet;
+    }
+
+    public void addChild(Human child) {
         count++;
         children[temp] = child;
         temp++;
-
     }
 
 
@@ -75,9 +51,8 @@ public class Family {
         }
         temp--;
         count--;
-
-
     }
+
 
     public StringBuilder showChildren() {
         StringBuilder sb = new StringBuilder();
@@ -85,6 +60,11 @@ public class Family {
             sb.append(children[i].toString());
         }
         return sb;
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("Object has been removed");
     }
 
     @Override
@@ -97,4 +77,6 @@ public class Family {
                 ", count=" + count +
                 '}';
     }
+
+
 }

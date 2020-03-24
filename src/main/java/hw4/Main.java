@@ -1,19 +1,6 @@
-package Homeworks.hw4;
+package hw4;
 
 public class Main {
-//    public static void main(String[] args) {
-//
-//
-//
-//
-//
-
-//        kitty.describePet();
-//        kitty.greetPet();
-//        System.out.println(kitty.toString());
-//
-//    }
-
     public static void main(String[] args) {
 
         String[][] schedule = new String[7][2];

@@ -1,4 +1,4 @@
-package hw6;
+package hw7;
 
 public enum DayOfWeek {
     Monday,
