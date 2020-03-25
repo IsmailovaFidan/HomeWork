@@ -14,8 +14,8 @@ class FamilyTest {
     Human vito = new Human("Vito", "Karlene", 1977,70,1,"go to courses ",bolt);//Father
     Human jane = new Human("Jane", "Karlene", 1977,80,2,"go to courses ",garfield);//Mother
     Family family=new Family(jane,vito);
-    Human child1 = new Human("Kitty", "Karleone", 2000, 75,4,"go to courses ",garfield);
-    Human child2 = new Human("Jack", "Karleone", 2002, 60,3,"to go for a walk",bolt);
+    Human child1 = new Human("Kitty", "Karlene", 2000, 75,4,"go to courses ",garfield);
+    Human child2 = new Human("Jack", "Karlene", 2002, 60,3,"to go for a walk",bolt);
 
 
     @BeforeEach
